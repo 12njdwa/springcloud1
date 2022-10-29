@@ -1,0 +1,14 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    consumer: /c/**
+    provider: /p/**       #注册中心中name为provider的请求    当请求体为/p/**的时候，说明访问的是provider
+

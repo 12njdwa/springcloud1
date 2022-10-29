@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: configclient
+#  profiles:
+#    active: dev         #目标配置文件名称是spring.application.name和spring.profiles.active的拼接
+  cloud:
+    config:
+      name: configclient
+      label: master
+      discovery:
+        enabled: true
+        service-id: nativeconfigserver
+#      uri: http://localhost:8762
+#      fail-fast: true         #设置客户端优先判断configserver获取是否正常x
+
+
+server:
+  port: 8060

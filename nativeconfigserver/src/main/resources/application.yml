@@ -1,0 +1,23 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: nativeconfigserver
+#  profiles:
+#    active: native              #配置文件的获取方式
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/12njdwa/springcloud.git       #远程调用还要开vpn，不然会响应超时
+          search-paths: config              #文件夹
+          username: 12njdwa
+          password: yan13977931123.
+      label: master                 #分支
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#        native:
+#          search-locations: classpath:/shared       #本地配置文件的存放路径
