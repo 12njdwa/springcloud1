@@ -1,4 +1,4 @@
-foo: foo versson 1111111
+foo: foo versson 11111112222
 eureka:
   client:
     service-url:
